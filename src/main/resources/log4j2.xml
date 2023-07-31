@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} %p %C{1} %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <!--
+        <Http name="elasticsearch" url="${ELASTICSEARCH_URL}">
+            <JSONLayout compact="true" complete="false" eventEol="true" properties="true" stacktraceAsString="true"
+                        includeTimeMillis="true">
+                <KeyValuePair key="elementDescription" value="${ctx:elementDescription}"/>
+                <KeyValuePair key="visaForm" value="${ctx:visaForm}"/>
+                <KeyValuePair key="timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}"/>
+            </JSONLayout>
+        </Http>
+        -->
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <!-- <AppenderRef ref="elasticsearch"/> -->
+        </Root>
+    </Loggers>
+
+</Configuration>
