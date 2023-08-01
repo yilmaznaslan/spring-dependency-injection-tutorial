@@ -4,16 +4,16 @@ import com.sun.net.httpserver.HttpServer;
 import com.yilmaznaslan.ecommerce.controller.CustomerController;
 import com.yilmaznaslan.ecommerce.controller.OrderController;
 import com.yilmaznaslan.ecommerce.repository.CampaignRepository;
-import com.yilmaznaslan.ecommerce.repository.CustomerRepository;
 import com.yilmaznaslan.ecommerce.repository.OrderRepository;
 import com.yilmaznaslan.ecommerce.repository.ProductRepository;
 import com.yilmaznaslan.ecommerce.repository.impl.InMemoryCampaignRepository;
-import com.yilmaznaslan.ecommerce.repository.impl.InMemoryCustomerRepository;
 import com.yilmaznaslan.ecommerce.repository.impl.InMemoryOrderRepository;
 import com.yilmaznaslan.ecommerce.repository.impl.InMemoryProductRepository;
 import com.yilmaznaslan.ecommerce.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -27,9 +27,8 @@ public class MainApplication {
 
 
         // Managing dependencies for CustomerController
-        CustomerRepository customerRepository = new InMemoryCustomerRepository();
-        CustomerService customerService = new CustomerService(customerRepository);
-        server.createContext("/customers", new CustomerController(customerService));
+        ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        CustomerService customerService = context.getBean(CustomerService.class);
 
         // Managing dependencies for OrderController
         ProductRepository productRepository = new InMemoryProductRepository();
@@ -46,7 +45,7 @@ public class MainApplication {
                 paymentProcessor, inventoryService, shippingService, notificationService, campaignService);
 
 
-         // Registering the Contexts
+        // Registering the Contexts
         server.createContext("/orders", new OrderController(orderService));
         server.createContext("/customers", new CustomerController(customerService));
         server.setExecutor(null); // creates a default executor

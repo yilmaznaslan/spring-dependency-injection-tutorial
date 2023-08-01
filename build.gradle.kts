@@ -1,11 +1,16 @@
 plugins {
-    id("java")
-    id("application")
+    java
+    application
+    id("org.springframework.boot") version "2.6.1"
+    id("io.spring.dependency-management") version "1.0.11.RELEASE"
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
 application {
     mainClass.set("com.yilmaznaslan.ecommerce.MainApplication")
@@ -16,14 +21,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
-
-    implementation("org.slf4j:slf4j-api:2.0.6")
-    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0")
-
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("org.springframework:spring-context:5.3.10")
+    implementation ("org.springframework.boot:spring-boot-starter-log4j2")
 }
+
+
 
 tasks.test {
     useJUnitPlatform()
