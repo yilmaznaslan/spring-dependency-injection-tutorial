@@ -1,7 +1,6 @@
 package com.yilmaznaslan.ecommerce.repository.impl;
 
 import com.yilmaznaslan.ecommerce.model.Campaign;
-import com.yilmaznaslan.ecommerce.model.Customer;
 import com.yilmaznaslan.ecommerce.model.Product;
 import com.yilmaznaslan.ecommerce.repository.CampaignRepository;
 

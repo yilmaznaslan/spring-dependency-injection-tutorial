@@ -2,7 +2,6 @@ package com.yilmaznaslan.ecommerce.repository.impl;
 
 import com.yilmaznaslan.ecommerce.model.Customer;
 import com.yilmaznaslan.ecommerce.model.Product;
-import com.yilmaznaslan.ecommerce.repository.CustomerRepository;
 import com.yilmaznaslan.ecommerce.repository.ProductRepository;
 
 import java.util.HashMap;
