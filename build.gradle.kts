@@ -1,8 +1,6 @@
 plugins {
-    java
-    application
-    id("org.springframework.boot") version "2.6.1"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    id("java")
+    id("application")
 }
 
 group = "org.example"
@@ -22,7 +20,8 @@ repositories {
 
 dependencies {
     implementation("org.springframework:spring-context:5.3.10")
-    implementation ("org.springframework.boot:spring-boot-starter-log4j2")
+    implementation("org.slf4j:slf4j-api:1.7.25")
+    implementation("org.slf4j:slf4j-simple:2.0.7")
 }
 
 
