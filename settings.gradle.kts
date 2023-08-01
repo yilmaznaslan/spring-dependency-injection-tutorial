@@ -1,2 +1,2 @@
-rootProject.name = "dependency-injection-tutorial"
+rootProject.name = "spring-dependency-injection-tutorial"
 
