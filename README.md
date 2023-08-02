@@ -6,37 +6,40 @@ As a product owner, I want to be able to create promotional campaigns to boost s
 - The CampaignService should have access to the ProductService to fetch and update product details.
 
 - When a campaign is active, the OrderService should apply the campaign discount when creating an order. Therefore, the
-OrderService should have access to the CampaignService.
+  OrderService should have access to the CampaignService.
 
-- Customers should be notified when a campaign starts and ends. The CampaignService should use the 
-  NotificationService to
-send these notifications.
+- Customers should be notified when a campaign starts and ends. The CampaignService should use the NotificationService
+  to
+  send these notifications.
 
 - I want to be able to query active campaigns, so a CampaignRepository should be created to manage campaign data.
 
-- I want to be able to manage campaigns through a REST API, so a CampaignController should be created to handle these 
-HTTP
-requests. This controller should depend on the CampaignService.
+- I want to be able to manage campaigns through a REST API, so a CampaignController should be created to handle these
+  HTTP
+  requests. This controller should depend on the CampaignService.
 
-You need to create new classes: 
-- Campaign, 
-- CampaignRepository, 
-- CampaignService, and 
-- CampaignController. 
+You need to create new classes:
 
-Also, you'll need to modify existing classes: 
-- Product, 
+- Campaign,
+- CampaignRepository,
+- CampaignService, and
+- CampaignController.
+
+Also, you'll need to modify existing classes:
+
+- Product,
 - ProductService, OrderService, and NotificationService.
 
 This feature should prove challenging without a DI framework because:
 
-- You'll need to manually create and manage instances of the new classes. If the CampaignService has dependencies, 
+- You'll need to manually create and manage instances of the new classes. If the CampaignService has dependencies,
   you'll
-need to create and pass these dependencies whenever you create a CampaignService instance. If these dependencies change
-in the future, you'll have to update your code in all places where you create a CampaignService instance.
+  need to create and pass these dependencies whenever you create a CampaignService instance. If these dependencies
+  change
+  in the future, you'll have to update your code in all places where you create a CampaignService instance.
 
 - You'll have to modify existing classes to include new dependencies. For example, OrderService will now need access to
-CampaignService to check for active campaigns and apply discounts.
+  CampaignService to check for active campaigns and apply discounts.
 
 Writing unit tests becomes harder as you need to manually create and manage mock instances of the new dependencies.
 

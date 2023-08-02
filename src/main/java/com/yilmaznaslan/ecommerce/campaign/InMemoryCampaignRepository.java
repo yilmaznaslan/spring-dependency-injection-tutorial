@@ -1,8 +1,6 @@
 package com.yilmaznaslan.ecommerce.campaign;
 
-import com.yilmaznaslan.ecommerce.campaign.Campaign;
 import com.yilmaznaslan.ecommerce.product.Product;
-import com.yilmaznaslan.ecommerce.campaign.CampaignRepository;
 
 import java.util.HashMap;
 import java.util.List;

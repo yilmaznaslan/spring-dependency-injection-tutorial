@@ -1,6 +1,9 @@
 package com.yilmaznaslan.ecommerce;
 
 import com.sun.net.httpserver.HttpServer;
+import com.yilmaznaslan.ecommerce.campaign.CampaignRepository;
+import com.yilmaznaslan.ecommerce.campaign.CampaignService;
+import com.yilmaznaslan.ecommerce.campaign.InMemoryCampaignRepository;
 import com.yilmaznaslan.ecommerce.customer.CustomerController;
 import com.yilmaznaslan.ecommerce.customer.CustomerRepository;
 import com.yilmaznaslan.ecommerce.customer.CustomerService;
@@ -29,11 +32,14 @@ public class MainApplication {
         CustomerService customerService = new CustomerService(customerRepository);
         server.createContext("/customers", new CustomerController(customerService));
 
+
         // Managing dependencies for OrderController
         OrderRepository orderRepository = new InMemoryOrderRepository();
         ProductService productService = new ProductService();
         PaymentService paymentService = new PaymentService();
-        OrderService orderService = new OrderService(orderRepository, customerService, productService, paymentService);
+        CampaignRepository campaignRepository = new InMemoryCampaignRepository();
+        CampaignService campaignService = new CampaignService(productService, campaignRepository);
+        OrderService orderService = new OrderService(orderRepository, customerService, productService, paymentService, campaignService);
 
         // Registering the Contexts
         server.createContext("/orders", new OrderController(orderService));
