@@ -1,6 +1,6 @@
-package com.yilmaznaslan.ecommerce.service;
+package com.yilmaznaslan.ecommerce.campaign;
 
-import com.yilmaznaslan.ecommerce.repository.CampaignRepository;
+import com.yilmaznaslan.ecommerce.product.ProductService;
 
 public class CampaignService {
 

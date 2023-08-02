@@ -1,4 +1,4 @@
-package com.yilmaznaslan.ecommerce.model;
+package com.yilmaznaslan.ecommerce.customer;
 
 // model/Customer.java
 public class Customer {

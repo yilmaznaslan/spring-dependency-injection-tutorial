@@ -1,7 +1,4 @@
-package com.yilmaznaslan.ecommerce.service;
-
-import com.yilmaznaslan.ecommerce.model.Customer;
-import com.yilmaznaslan.ecommerce.repository.CustomerRepository;
+package com.yilmaznaslan.ecommerce.customer;
 
 public class CustomerService {
 

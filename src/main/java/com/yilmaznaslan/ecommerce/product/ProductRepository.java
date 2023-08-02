@@ -1,6 +1,6 @@
-package com.yilmaznaslan.ecommerce.repository;
+package com.yilmaznaslan.ecommerce.product;
 
-import com.yilmaznaslan.ecommerce.model.Product;
+import com.yilmaznaslan.ecommerce.product.Product;
 
 import java.util.List;
 

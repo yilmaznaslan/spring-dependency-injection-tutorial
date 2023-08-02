@@ -42,3 +42,9 @@ Writing unit tests becomes harder as you need to manually create and manage mock
 
 The development and maintenance effort of this feature would be significantly reduced with a DI framework that
 automatically manages dependencies.
+
+## Bash Rest Calls
+
+```bash
+curl --location 'http://localhost:8000/customers/1'
+```

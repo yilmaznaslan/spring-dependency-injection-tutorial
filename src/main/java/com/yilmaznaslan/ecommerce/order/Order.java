@@ -1,4 +1,7 @@
-package com.yilmaznaslan.ecommerce.model;
+package com.yilmaznaslan.ecommerce.order;
+
+import com.yilmaznaslan.ecommerce.customer.Customer;
+import com.yilmaznaslan.ecommerce.product.Product;
 
 import java.util.List;
 

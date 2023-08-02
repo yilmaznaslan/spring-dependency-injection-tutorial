@@ -1,6 +1,6 @@
-package com.yilmaznaslan.ecommerce.service;
+package com.yilmaznaslan.ecommerce.notification;
 
-import com.yilmaznaslan.ecommerce.model.Customer;
+import com.yilmaznaslan.ecommerce.customer.Customer;
 
 public class NotificationService {
     public void notifyCustomer(Customer customer, String message) {
