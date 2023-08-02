@@ -1,7 +1,7 @@
-package com.yilmaznaslan.ecommerce.service;
+package com.yilmaznaslan.ecommerce.inventory;
 
-import com.yilmaznaslan.ecommerce.model.Product;
-import com.yilmaznaslan.ecommerce.repository.ProductRepository;
+import com.yilmaznaslan.ecommerce.product.Product;
+import com.yilmaznaslan.ecommerce.product.ProductRepository;
 
 import java.util.List;
 

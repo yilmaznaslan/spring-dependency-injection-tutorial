@@ -1,4 +1,4 @@
-package com.yilmaznaslan.ecommerce.model;
+package com.yilmaznaslan.ecommerce.product;
 
 public class Product {
     private String id;

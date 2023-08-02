@@ -1,6 +1,6 @@
-package com.yilmaznaslan.ecommerce.service;
+package com.yilmaznaslan.ecommerce.shipping;
 
-import com.yilmaznaslan.ecommerce.model.Order;
+import com.yilmaznaslan.ecommerce.order.Order;
 
 public class ShippingService {
     public void shipOrder(Order order) {

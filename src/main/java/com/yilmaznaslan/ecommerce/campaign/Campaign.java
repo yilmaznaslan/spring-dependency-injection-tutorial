@@ -1,4 +1,6 @@
-package com.yilmaznaslan.ecommerce.model;
+package com.yilmaznaslan.ecommerce.campaign;
+
+import com.yilmaznaslan.ecommerce.product.Product;
 
 import java.time.Duration;
 import java.util.List;

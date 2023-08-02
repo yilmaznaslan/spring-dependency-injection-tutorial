@@ -1,9 +1,7 @@
-package com.yilmaznaslan.ecommerce.controller;
+package com.yilmaznaslan.ecommerce.customer;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import com.yilmaznaslan.ecommerce.model.Customer;
-import com.yilmaznaslan.ecommerce.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

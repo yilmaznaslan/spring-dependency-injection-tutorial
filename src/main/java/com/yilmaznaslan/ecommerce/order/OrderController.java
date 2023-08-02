@@ -1,8 +1,7 @@
-package com.yilmaznaslan.ecommerce.controller;
+package com.yilmaznaslan.ecommerce.order;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import com.yilmaznaslan.ecommerce.service.OrderService;
 
 import java.io.IOException;
 import java.util.List;

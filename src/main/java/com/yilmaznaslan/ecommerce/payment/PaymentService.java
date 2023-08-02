@@ -1,8 +1,12 @@
-package com.yilmaznaslan.ecommerce.service;
+package com.yilmaznaslan.ecommerce.payment;
 
-import com.yilmaznaslan.ecommerce.model.Customer;
+import com.yilmaznaslan.ecommerce.customer.Customer;
 
-public class PaymentProcessor {
+public class PaymentService {
+
+    public PaymentService() {
+    }
+
     public void processPayment(Customer customer, double amount) {
         // Process payment
     }
